@@ -3,6 +3,19 @@ import * as BooksAPI from '../BooksAPI'
 import { Link } from 'react-router-dom'
 import scapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
+import styled, { css } from 'styled-components';
+
+
+const Button = styled.button`
+  border-radius: 3px;
+  padding: 0.28em 1em;
+  margin: 0 1em;
+  background: transparent;
+  color: #2e7c31;
+  border: 2px solid #2e7c31;
+  margin-top: ${2 * 5}px;
+`;
+
 
 
 class SearchComponent extends Component{
@@ -45,7 +58,9 @@ class SearchComponent extends Component{
             <div>
                 <div className="search-books">
                     <div className="search-books-bar">
-                        <Link to="/" className="close-search">Close</Link>
+                    <Link to="/">
+                        <Button>BACK</Button>
+                    </Link>
                         <div className="search-books-input-wrapper">
                             <input 
                                 type="text"
